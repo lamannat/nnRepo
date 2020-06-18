@@ -282,7 +282,7 @@ bool funcion_valida(string const &func){
     	else if(isdigit(func[i]) || func[i] == 'j' || func[i] == 'z'){
 
 	  		if(isdigit(func[i])){
-    			while(isdigit(func[i])){   //numeros de multiples digitos				
+    			while(isdigit(func[i]) || func[i] == '.'){   //numeros de multiples digitos				
     				i++;
     			}
     			i--;
