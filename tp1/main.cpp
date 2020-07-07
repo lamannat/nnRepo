@@ -1,12 +1,12 @@
 #include <iostream>
 #include <fstream>
-#include <complex>       
+#include <complex>
 #include "vector.h"
 #include "cmdline.h"
 #include "imagen.h"
 #include "modulo_funcion_compleja.h"
 
-
+//prueba de git y github
 using namespace std;
 
 static void opt_input(string const &);
@@ -30,14 +30,14 @@ static string funcion;
 
 
 //transformacion_compleja modifica el contenido de una matriz utilizando la funcion compleja en formato rpn de la variable global funcion
-//debe pasarse como parametros una matriz implementada mediante vector<vector<int>>, el ancho de la matriz (cantidad columnas) y el alto (cantidad filas) 
+//debe pasarse como parametros una matriz implementada mediante vector<vector<int>>, el ancho de la matriz (cantidad columnas) y el alto (cantidad filas)
 void transformacion_compleja(vector<vector<int>> &, int, int);
 
 
 
 int main(int argc, char * const argv[])
 {
-    cmdline cmdl(options);	
+    cmdline cmdl(options);
     cmdl.parse(argc, argv); // Metodo de parseo de la clase cmdline
 
     imagen imgin;
@@ -49,7 +49,7 @@ int main(int argc, char * const argv[])
         return 1;
     }
     imgout = imgin.transformar(transformacion_compleja);
-    
+
     *oss << imgout;
 
     return 0;
@@ -115,7 +115,7 @@ opt_function(string const &arg){
         cerr<<"funcion de entrada no valida"<<endl;
         exit(1);
     }
-    
+
 }
 
 static void
